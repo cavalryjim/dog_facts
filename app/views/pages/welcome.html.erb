@@ -1,2 +1,54 @@
-<h1>Pages#welcome</h1>
-<p>Find me in app/views/pages/welcome.html.erb</p>
+<div class="full_page">
+  <section class="white_background">	
+    <div class="row">
+  	  <div class="large-6 columns ">
+  	  	<h4>What does the DogFacts Animal Wellness Report &#0153; show you?</h4>
+  	    <p>
+  	      Every DogFacts Report contains important information that can impact your decision about 
+  	      aquiring an animal through a detailed health, wellness, and ownership check.
+  	    </p>
+  	    
+  	    <%= button_small('View Sample Report')%>
+  	  </div>
+  	  
+  	  <div class="large-6 columns ">
+  	  	<div class="panel callout radius">
+		  <h5>I need a <strong>DogFacts Report</strong></h5>
+		  <h6>View a history for any dog</h6>
+		  <%= render 'reports/simple_form'%>
+		  
+		  <%= link_to 'No microchip id? Click Here', '#' %>
+		</div>
+  	  </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+      	<div class="panel radius">
+      	  <h4>Every DogFacts Animal Wellness Report &#0153; checks for</h4>
+      	  <div class="row">
+      	  	<div class="large-4 columns">
+      	  	  Every DogFacts Report contains important information that can impact your decision about adopting or purchasing
+      	  	  an animal through a detailed check of health and wellness information. Information in DogFacts Reports may include:
+      	  	</div>
+      	  	<div class="large-4 columns">
+      	  	  <ul class="fa-ul">
+      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  </ul>
+      	  	</div>
+      	  	<div class="large-4 columns">
+      	  	  <ul class="fa-ul">
+      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  </ul>
+      	  	</div>
+      	  </div>
+      	</div>
+      </div>
+    </div>
+  </section>
+</div>
+

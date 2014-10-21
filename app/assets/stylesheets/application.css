@@ -10,6 +10,30 @@
  *
  *= require_self
  *= require foundation_and_overrides
-
+ *= require font-awesome
  *= require_tree .
  */
+
+header {
+  background-color: blue !important;
+}
+
+.logo_header a{
+  color: white !important;
+}
+
+span.logo_dog {
+  font-family: 'Anton';
+}
+
+span.logo_facts {
+  font-family: 'Permanent Marker';
+}
+
+.center_text, .center {
+  text-align: center !important;
+}
+
+header .inline-list {
+  overflow: visible !important;
+}

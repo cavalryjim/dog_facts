@@ -1,4 +1,5 @@
-<header id="header" class="top_bar">
+
+<header id="header" class="top-bar">
   <div class="row">
     <div class="large-12 columns">
 	  <ul id="utility-nav" class="inline-list right">
@@ -10,10 +11,26 @@
 		  	  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>	
 	        </ul>
 	      </li>
+	    <% else %>
+	      <li> <%= button_small('login')%></li>
+	      <li> <%= button_small('help')%></li>
  	    <% end %>
+ 	    <li class="has-form">
+          <div class="row collapse">
+            <div class="small-8  columns">
+              <input type="text" placeholder="microchip lookup">
+            </div>
+            <div class="small-3 end columns">
+              <a href="#" class="alert button expand">Go</a>
+            </div>
+          </div>
+        </li>
  	  </ul>
  	  
- 	  <h3 class="logo_header"><%= link_to 'DOG FACTS', root_path %></h3>
+ 	  <h3 class="logo_header"><%= link_to dog_facts_logo, root_path %></h3>
     </div>
   </div>
 </header>
+
+
+
