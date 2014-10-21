@@ -1,4 +1,8 @@
 DogFacts::Application.routes.draw do
+  get "pages/welcome"
+  devise_for :users
+  
+  root to: "pages#welcome"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

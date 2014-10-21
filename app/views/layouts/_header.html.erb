@@ -1,0 +1,19 @@
+<header id="header" class="top_bar">
+  <div class="row">
+    <div class="large-12 columns">
+	  <ul id="utility-nav" class="inline-list right">
+  	    <% if user_signed_in? %>  
+	      <li>
+	        <%= link_to current_user.name, '#', 'data-dropdown' => 'user_drop', 'data-options' => 'is_hover:true' %>
+	        <ul id='user_drop' class='f-dropdown' data-dropdown-content> 	
+		      <li><%= link_to "Edit profile", "#" %></li>
+		  	  <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>	
+	        </ul>
+	      </li>
+ 	    <% end %>
+ 	  </ul>
+ 	  
+ 	  <h3 class="logo_header"><%= link_to 'DOG FACTS', root_path %></h3>
+    </div>
+  </div>
+</header>
