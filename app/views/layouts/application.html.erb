@@ -15,6 +15,12 @@
 
   <body>
 	<%= render 'layouts/header' %>
+	<% flash.each do |name, msg| %>
+	  <div class="alert-box <%= name == :notice ? "success" : "alert" %>" data-alert> 
+		  <%= msg %>
+          <a href="" class="close">&times;</a>
+	  </div>
+    <% end %>
 	
     <section>
       <%= yield %>

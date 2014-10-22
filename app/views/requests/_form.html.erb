@@ -1,17 +1,96 @@
-<%= form_for(@request) do |f| %>
-  <% if @request.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@request.errors.count, "error") %> prohibited this request from being saved:</h2>
-
-      <ul>
-      <% @request.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+<%= form_for(@request, html: { "data-abide" => '' }) do |f| %>
+  <div class="panel">
+    <h5>Step 1: Enter your information</h5>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestor_name, "Your name *" %>
+        <%= f.text_field :requestor_name, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
     </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestor_email, "Your email *" %>
+        <%= f.text_field :requestor_email, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestor_phone, "Your phone *" %>
+        <%= f.text_field :requestor_phone, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
+    </div>
+    
   </div>
+  <div class="panel">
+    <h5>Step 2: Dog's information</h5>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :animal_name, "Dog's name *" %>
+        <%= f.text_field :animal_name, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :animal_breed, "Dog's breed(s)" %>
+        <%= f.text_field :animal_breed %>
+      </div>
+    </div>
+    <% if @no_chip %>
+      <%= f.hidden_field :microchip_id, value: false %>	
+    <% else %>
+      <div class="row">
+        <div class="large-12 columns">
+      	  <%= f.label :microchip_id, "Microchip ID" %>
+          <%= f.text_field :microchip_id %>
+        </div>
+      </div>
+    <% end %>
+    
+ 
+  </div>
+  <div class="panel">
+    <h5>Step 3: Current owner's information</h5>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestee_name, "Owner's name *" %>
+        <%= f.text_field :requestee_name, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestee_type, "Business type *" %>
+      	<%= f.select :requestee_type, ["Animal Rescue", "Breeder", "Individual owner"], 'required' => :required %>     
+        <small class="error">required field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestee_email, "Owner's email *" %>
+        <%= f.text_field :requestee_email, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestee_phone, "Owner's phone *" %>
+        <%= f.text_field :requestee_phone, 'required' => :required %>
+        <small class="error">required field</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="large-12 columns">
+      	<%= f.label :requestee_website, "Owner's website" %>
+        <%= f.text_field :requestee_website %>
+      </div>
+    </div>
+  </div>
+ 
+    <div class="actions">
+      <%= f.submit "submit", class: "button small" %>
+    </div> 
 <% end %>

@@ -1,8 +1,4 @@
-<div class="full_page">
-  <section class="g">
-  	
-  </section>	
-
+<div class="full_page">	
   <section class="white_background">	
     <div class="row">
   	  <div class="large-6 columns ">
@@ -21,7 +17,7 @@
 		  <h6>View a history for any dog</h6>
 		  <%= render 'requests/simple_form'%>
 		  
-		  <%= link_to 'No microchip id? Click Here', new_request_path %>
+		  <%= link_to 'No microchip id? Click Here', new_request_path(no_chip: true) %>
 		</div>
   	  </div>
     </div>

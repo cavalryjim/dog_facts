@@ -1,0 +1,9 @@
+<%= image_tag 'https://secure.carfax.com/media/img/cfx/purchase/reportOnDevices.png' %>
+<p><%= link_to 'View a sample report', '#' %></p>
+<hr />
+<h4><small>EACH DOGFACTS REPORT CHECKS FOR:</small></h4>
+<ul class="fa-ul">
+  <% Check.find_each do |check|%>
+    <li><i class="fa-li fa fa-check-square"></i><%= check.name %></li>   
+  <% end %>
+</ul>
