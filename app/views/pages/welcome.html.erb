@@ -33,16 +33,16 @@
       	  	</div>
       	  	<div class="large-4 columns">
       	  	  <ul class="fa-ul">
-      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
-      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
-      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  	<% Check.first(Check.count/2).sample(4).each do |check|%>
+    			  <li><i class="fa-li fa fa-check-square"></i><%= check.name %></li>   
+  				<% end %>
       	  	  </ul>
       	  	</div>
       	  	<div class="large-4 columns">
       	  	  <ul class="fa-ul">
-      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
-      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
-      	  	  	<li><i class="fa-li fa fa-check-square"></i>Rabies vaccination</li>
+      	  	  	<% Check.last(Check.count/2).sample(4).each do |check|%>
+    			  <li><i class="fa-li fa fa-check-square"></i><%= check.name %></li>   
+  				<% end %>
       	  	  </ul>
       	  	</div>
       	  </div>
