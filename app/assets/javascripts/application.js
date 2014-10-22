@@ -16,4 +16,8 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(function(){ 
+  $(document).foundation(); 
+  
+  $('.full_page').css("min-height", $(window).height() - ( $("#header").height() + $("#footer").height() ) );
+});

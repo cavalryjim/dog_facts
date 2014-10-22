@@ -30,6 +30,14 @@ span.logo_facts {
   font-family: 'Permanent Marker';
 }
 
+.footer {
+  background-color: gray !important;
+}
+
+.footer a {
+	color: black !important;
+}
+
 .center_text, .center {
   text-align: center !important;
 }
