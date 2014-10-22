@@ -16,6 +16,7 @@ gem 'foundation-rails', '5.4.5.0'
 gem 'unicorn', '4.8.3'
 gem 'devise', '3.4.0'
 gem 'font-awesome-rails', '4.1.0.0'
+gem 'html5_validators', '1.1.2'
 
 
 group :doc do

@@ -1,4 +1,8 @@
 <div class="full_page">
+  <section class="g">
+  	
+  </section>	
+
   <section class="white_background">	
     <div class="row">
   	  <div class="large-6 columns ">
@@ -15,9 +19,9 @@
   	  	<div class="panel callout radius">
 		  <h5>I need a <strong>DogFacts Report</strong></h5>
 		  <h6>View a history for any dog</h6>
-		  <%= render 'reports/simple_form'%>
+		  <%= render 'requests/simple_form'%>
 		  
-		  <%= link_to 'No microchip id? Click Here', '#' %>
+		  <%= link_to 'No microchip id? Click Here', new_request_path %>
 		</div>
   	  </div>
     </div>

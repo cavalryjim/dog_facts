@@ -1,8 +1,11 @@
 DogFacts::Application.routes.draw do
-  get "pages/welcome"
   devise_for :users
   
   resources :reports
+  resources :requests
+  
+  get "privacy_policy" => "pages#privacy_policy", as: :privacy_policy
+  get "pages/welcome"
   
   root to: "pages#welcome"
   # The priority is based upon order of creation: first created -> highest priority.

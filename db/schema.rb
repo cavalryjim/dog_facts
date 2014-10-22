@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141021202658) do
+ActiveRecord::Schema.define(version: 20141022161642) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,23 @@ ActiveRecord::Schema.define(version: 20141021202658) do
     t.string   "microchip_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "requests", force: true do |t|
+    t.string   "requestor_email"
+    t.string   "microchip_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "requestor_name"
+    t.string   "requestor_phone"
+    t.string   "requestee_name"
+    t.string   "requestee_email"
+    t.string   "requestee_phone"
+    t.string   "requestee_website"
+    t.string   "requestee_type"
+    t.string   "animal_name"
+    t.string   "animal_species"
+    t.string   "animal_breed"
   end
 
   create_table "users", force: true do |t|

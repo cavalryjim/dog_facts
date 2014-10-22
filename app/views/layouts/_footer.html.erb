@@ -3,13 +3,13 @@
       
       <div class="row">
         <div class="large-5 columns">
-          <p>&copy; 2014 AnimalMinder, LLC.</p>
+          <p><%= link_to '&copy; 2014 AnimalMinder, LLC.'.html_safe, 'https://www.animalminder.com' %></p>
           
         </div>
         
         <div class="large-7 columns">
           <ul class="inline-list right">
-            <li><%= link_to 'privacy', '#' %></li>
+            <li><%= link_to 'privacy', privacy_policy_path %></li>
 			<li><%= link_to '<i class="fa fa-facebook"></i>'.html_safe, '#' %></li>
 			<li><%= link_to '<i class="fa fa-linkedin"></i>'.html_safe, '#' %></li>
 			<li><%= link_to '<i class="fa fa-twitter"></i>'.html_safe, '#' %></li>

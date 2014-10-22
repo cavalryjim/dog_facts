@@ -1,7 +1,7 @@
-<%= form_for(Report.new, html: {"data-abide" => ''}) do |f| %>
+<%= form_for(Request.new) do |f| %>
   <div class="row collapse">
     <div class="small-10 columns">
-	  <%= f.text_field :microchip_id, placeholder: "Enter microchip id"  %>
+	  <%= f.text_field :microchip_id, placeholder: "Enter microchip id", required: true  %>
     </div>
     <div class="small-2 columns">  
       <%= f.submit 'Go', class: "button postfix" %>
